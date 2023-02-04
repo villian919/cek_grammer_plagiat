@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -20,6 +21,9 @@
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
+
+
+
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -27,7 +31,7 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>cek_grammer_plagiat</title>
   <link rel="manifest" href="manifest.json">
@@ -39,20 +43,40 @@
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
+
 <body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- Firebase Configuration -->
   <script>
-    window.addEventListener('load', function(ev) {
+    var firebaseConfig = {
+      apiKey: 'AIzaSyDKcmtZ-Zwtg25TiL9UQUDL7kFrArLTIc0',
+      authDomain: "skripsicb1.firebaseapp.com",
+      databaseURL: "https://skripsicb1.firebaseio.com",
+      projectId: "skripsicb1",
+      storageBucket: "skripsicb1.appspot.com",
+      messagingSenderId: "290132275309",
+      appId: "1:290132275309:web:729c88d227435b5ea48f64",
+      measurementId: "G-V0LRFML6RE", a
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script>
+    window.addEventListener('load', function (ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         }
-      }).then(function(engineInitializer) {
+      }).then(function (engineInitializer) {
         return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
+      }).then(function (appRunner) {
         return appRunner.runApp();
       });
     });
   </script>
 </body>
+
 </html>
